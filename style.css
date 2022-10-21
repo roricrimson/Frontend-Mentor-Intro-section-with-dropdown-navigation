@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(0, 0%, 98%);
+  min-height: 100vh;
+  position: relative;
+  font-size: 1.8rem;
+  font-family: "Epilogue", sans-serif;
+  color: hsl(0, 0%, 41%);
+}
+
+.flex {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dropdown {
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown p:focus,
+.dropdown p:hover,
+nav a:hover,
+nav button:hover {
+  color: hsl(0, 0%, 8%);
+  border-color: hsl(0, 0%, 8%);
+}
+
+.dropdown-content {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.102);
+  top: 3rem;
+  right: 0rem;
+}
+
+.show {
+  display: flex !important;
+}
+
+.navbar-section {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+}
+
+.navbar-section-wraper {
+  width: 100%;
+}
+
+.menu {
+  display: none;
+}
+
+.close-menu {
+  display: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  gap: 5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  margin-right: 3rem;
+  cursor: pointer;
+}
+
+nav button {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 41%);
+  border: 0.1rem solid hsl(0, 0%, 41%);
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+.sign-up {
+  margin-left: auto;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-content {
+  margin: 11rem 15rem;
+}
+
+.text-content h1 {
+  color: hsl(0, 0%, 8%);
+  font-size: 7rem;
+  margin-bottom: 5rem;
+}
+
+.text-content p {
+  line-height: 2.7rem;
+  margin-bottom: 5rem;
+}
+
+.text-content button {
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  border: 0.1rem solid hsl(0, 0%, 8%);
+  border-radius: 1.2rem;
+  padding: 1.3rem 2rem;
+  margin-bottom: 10rem;
+  cursor: pointer;
+}
+
+.text-content button:hover {
+  color: hsl(0, 0%, 8%);
+  background-color: hsl(0, 0%, 98%);
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img-desktop img {
+  width: 90%;
+}
+.img-mobile {
+  display: none;
+}
+
+@media (max-width: 887px) {
+  .navbar-section-wraper {
+    background-color: hsla(0, 0%, 8%, 0.757);
+    display: none;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: row-reverse;
+  }
+
+  .navbar-section {
+    position: fixed;
+    height: 100vh;
+    background-color: hsl(0, 0%, 98%);
+    flex-direction: column;
+    align-items: flex-start;
+    width: 24rem;
+    padding: 2rem;
+    gap: 3rem;
+  }
+  .dropdown {
+    flex-direction: column;
+  }
+
+  .dropdown-content {
+    position: static;
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: none;
+  }
+
+  .sign-up {
+    text-align: center;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  nav button {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .menu {
+    display: block;
+    margin-left: auto;
+  }
+
+  .close-menu {
+    display: block;
+    margin-left: auto;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .text-content {
+    margin: 3rem 2rem;
+    text-align: center;
+  }
+
+  .text-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .text-content p {
+    line-height: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .text-content button {
+    margin-bottom: 4rem;
+  }
+
+  .logos {
+    margin-bottom: 3rem;
+  }
+
+  .logos img {
+    width: 7rem;
+  }
+
+  .img-desktop img {
+    display: none;
+  }
+  .img-mobile {
+    display: block;
+  }
+
+  .img-mobile img {
+    width: 100%;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem;
+  font-size: 12px;
+}
